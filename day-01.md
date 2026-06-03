@@ -1,3 +1,5 @@
+# Day 01 - Introduction to Automation
+
 ## Notes
 * Automation helps reduce manual work and human error.
 * Data-driven decisions are more reliable than intuition-based decisions.
