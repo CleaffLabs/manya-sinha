@@ -1,0 +1,111 @@
+{
+  "name": "Day-04-Data-handling",
+  "nodes": [
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        0,
+        0
+      ],
+      "id": "c6d2d611-6611-4b87-a28b-f8a9a826502c",
+      "name": "When clicking ‘Execute workflow’"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "688a817f-0754-4a65-9d6e-90fa02cf8d87",
+              "name": "firstName",
+              "value": "Manya",
+              "type": "string"
+            },
+            {
+              "id": "b0293911-a1e0-4261-91d8-786bbce5f1e7",
+              "name": "lastName",
+              "value": "Sinha",
+              "type": "string"
+            },
+            {
+              "id": "9915f8e7-58c8-48e3-b792-9d8677b299d2",
+              "name": "department",
+              "value": "AI Intern",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        208,
+        0
+      ],
+      "id": "6026b954-d513-40a5-99c8-c689be70fcb5",
+      "name": "Edit Fields"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "72ea97b7-b17c-4aa4-8b13-b7df0c0a4f1f",
+              "name": "=fullName",
+              "value": "={{$json.firstName}} {{$json.lastName}}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        416,
+        0
+      ],
+      "id": "1ab02f2a-6cc8-4deb-812c-152aead3d1c5",
+      "name": "Edit Fields1"
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "When clicking ‘Execute workflow’": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Edit Fields": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1",
+    "binaryMode": "separate"
+  },
+  "versionId": "e730c95e-9b96-4689-b110-a8dd31837938",
+  "meta": {
+    "instanceId": "a1f6bd7a801e8e00ebbdba56e0904ac8576837e80144a888ff5b185ee1ff1219"
+  },
+  "nodeGroups": [],
+  "id": "pMTqYUWF15iBhV6a",
+  "tags": []
+}
