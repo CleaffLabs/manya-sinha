@@ -1,0 +1,77 @@
+{
+  "name": "Day-03-nodes",
+  "nodes": [
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        0,
+        0
+      ],
+      "id": "f5f47210-6868-41ef-9fce-f397c618e201",
+      "name": "When clicking ‘Execute workflow’"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "baee6d24-386c-4538-82aa-3030e96530c5",
+              "name": "firstName",
+              "value": "Manya",
+              "type": "string"
+            },
+            {
+              "id": "26cbbf6d-41cf-467e-9fde-db9535c72314",
+              "name": "lastName",
+              "value": "Sinha",
+              "type": "string"
+            },
+            {
+              "id": "74ed0b2d-6f73-4523-a30d-d1ab90d97d0c",
+              "name": "role",
+              "value": "Intern",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        208,
+        0
+      ],
+      "id": "bfbf8850-c365-4aff-980e-b4a541a9fcb0",
+      "name": "Edit Fields"
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "When clicking ‘Execute workflow’": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1",
+    "binaryMode": "separate"
+  },
+  "versionId": "5192edbe-4cab-459d-b7ce-a312ef8befce",
+  "meta": {
+    "instanceId": "a1f6bd7a801e8e00ebbdba56e0904ac8576837e80144a888ff5b185ee1ff1219"
+  },
+  "nodeGroups": [],
+  "id": "XrCOAUGlhw8R1LRp",
+  "tags": []
+}
